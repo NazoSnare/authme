@@ -1,25 +1,17 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
+import main from "../resources/index.js"
+
 const Home = () => {
+	console.log("________________________")
+	main()
+
 	return (
 		<div className="main">
-			<h1>This is React inside Electron!</h1>
-			<br />
-			<h3>Home</h3>
-			<br />
-
-			<Link to="/about">About</Link>
+			<h1>Authme</h1>
 
 			<br />
-
-			<button
-				onClick={() => {
-					electron.notificationApi.sendNotification("My custom notification!")
-				}}
-			>
-				Send notification
-			</button>
 		</div>
 	)
 }

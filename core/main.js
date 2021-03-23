@@ -11,10 +11,9 @@ const createWindow = () => {
 		minWidth: 800,
 		backgroundColor: "black",
 		webPreferences: {
-			nodeIntegration: false,
-			worldSafeExecuteJavaScript: true,
-			contextIsolation: true,
-
+			nodeIntegration: true,
+			contextIsolation: false,
+			enableRemoteModule: true,
 			preload: path.join(__dirname, "preload.js"),
 		},
 	})
