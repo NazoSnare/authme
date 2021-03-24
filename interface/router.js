@@ -1,17 +1,20 @@
 import React from "react"
 import { HashRouter, Route, Switch } from "react-router-dom"
+import { AliveScope } from "react-activation"
 
-import Home from "./home.jsx"
-import About from "./about.jsx"
+import Application from "./application.jsx"
+import Settings from "./settings.jsx"
 
 const Router = () => {
 	return (
-		<HashRouter>
-			<Switch>
-				<Route exact path="/" component={Home} />
-				<Route exact path="/about" component={About} />
-			</Switch>
-		</HashRouter>
+		<AliveScope>
+			<HashRouter>
+				<Switch>
+					<Route exact path="/" component={Application} />
+					<Route exact path="/settings" component={Settings} />
+				</Switch>
+			</HashRouter>
+		</AliveScope>
 	)
 }
 

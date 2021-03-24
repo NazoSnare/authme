@@ -11,7 +11,7 @@
 		"pack": "webpack --config .webpackrc.js",
 		"start": "electron .",
 		"electronmon": "electronmon .",
-		"build": "npm run pack && electron-builder",
+		"build": "npm run pack && electron-builder --publish=never",
 		"lint": "eslint --fix ."
 	},
 	"build": {
@@ -36,7 +36,8 @@
 	"main": "./core/main.js",
 	"dependencies": {
 		"@levminer/speakeasy": "^1.0.7",
-		"electron-util": "^0.14.2"
+		"electron-util": "^0.14.2",
+		"react-activation": "^0.8.3"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.13",

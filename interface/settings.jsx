@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const About = () => {
+const Settings = () => {
 	return (
 		<div className="main">
 			<h1>This is React inside Electron!</h1>
@@ -24,4 +24,4 @@ const About = () => {
 	)
 }
 
-export default About
+export default Settings

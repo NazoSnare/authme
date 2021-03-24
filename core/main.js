@@ -19,6 +19,8 @@ const createWindow = () => {
 	})
 
 	window.loadFile(path.join(__dirname, "../resources/index.html"))
+
+	window.webContents.openDevTools()
 }
 
 ipcMain.on("notify", (_, message) => {
