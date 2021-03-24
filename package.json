@@ -11,32 +11,37 @@
 		"pack": "webpack --config .webpackrc.js",
 		"start": "electron .",
 		"electronmon": "electronmon .",
-		"build": "electron-builder"
+		"build": "npm run pack && electron-builder",
+		"lint": "eslint --fix ."
 	},
 	"build": {
-		"productName": "create-electron-react-app",
-		"appId": "com.levminer.create-electron-react-app",
+		"productName": "authme-3",
+		"appId": "com.levminer.authme-3",
 		"win": {
 			"target": [
 				"nsis"
 			]
-		}
+		},
+		"files": [
+			"!**/node_modules/**/**",
+			"!**/.github/**/**"
+		]
 	},
 	"electronmon": {
 		"patterns": [
-			"!renderer/*",
+			"!interface/*",
 			"!dist/*"
 		]
 	},
 	"main": "./core/main.js",
 	"dependencies": {
+		"@levminer/speakeasy": "^1.0.7",
 		"electron-util": "^0.14.2"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.13",
 		"@babel/preset-env": "^7.12.13",
 		"@babel/preset-react": "^7.12.13",
-		"@levminer/speakeasy": "^1.0.7",
 		"babel-loader": "^8.2.2",
 		"concurrently": "^5.3.0",
 		"css-loader": "^4.3.0",

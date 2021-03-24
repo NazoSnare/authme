@@ -6,6 +6,8 @@ const main = () => {
 	console.log(speakeasy.generateSecret())
 
 	let secret = asd ** asdka
+
+	document.querySelector("#h1").textContent = "asd"
 }
 
 export default main
