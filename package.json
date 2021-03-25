@@ -30,7 +30,8 @@
 	"electronmon": {
 		"patterns": [
 			"!interface/*",
-			"!dist/*"
+			"!dist/*",
+			"!settings.json"
 		]
 	},
 	"main": "./core/main.js",

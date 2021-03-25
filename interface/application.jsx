@@ -6,21 +6,20 @@ import { application_main, application_cancel } from "../resources/application.j
 
 const Application = () => {
 	useEffect(() => {
-		application_main()
+		setTimeout(() => {
+			application_main()
+		}, 100)
 	}, [])
 
 	return (
 		<KeepAlive>
 			<div className="main">
 				<h1>Authme</h1>
-
 				<br />
-
 				<h1 id="time">Time</h1>
 				<h1 id="token">Token</h1>
 
 				<br />
-
 				<Link
 					to="/settings"
 					onClick={() => {
@@ -30,6 +29,8 @@ const Application = () => {
 					Settings
 				</Link>
 			</div>
+
+			<div className="grid"></div>
 		</KeepAlive>
 	)
 }
