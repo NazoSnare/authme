@@ -16,11 +16,7 @@ const settings_main = () => {
 		})
 	)
 
-	console.log(file.settings)
-
-	console.log("settings")
-
-	let name_button = document.querySelector("#button0")
+	const name_button = document.querySelector("#button0")
 
 	name_button.addEventListener("click", () => {
 		if (file.settings.show_2fa_names === false) {
